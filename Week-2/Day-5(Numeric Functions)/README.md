@@ -1,255 +1,271 @@
-
 # 📅 Week 2 - Day 5
 
-# 🏆 SQL Window Functions Assignment (ROW_NUMBER, RANK, DENSE_RANK)
+# 🔢 SQL Numeric Functions Assignment
 
 ## 🎯 Objective
 
-The objective of this practice session is to understand and implement **SQL Window Ranking Functions** using relational database tables such as **Employees**. This session focuses on ranking data records, assigning sequential row numbers, handling duplicate rankings, partition-based ranking, and real-time business analytical reporting using advanced SQL window functions.
+The objective of this practice session is to understand and implement **SQL Numeric Functions** using relational database tables such as **Employee Salary**. This session focuses on number manipulation, rounding operations, mathematical calculations, financial processing, and real-time business numeric analysis.
 
 ---
 
 # 🧱 Database Setup
 
-The following table was used for SQL Window Functions practice:
+The following table was used for SQL Numeric Functions practice:
 
-👨‍💼 **Employees**
+* 👨‍💼 Employee Salary
 
 The database schema includes:
 
-- Employee salary records
-- Department-wise employee grouping
-- Joining date analysis
-- Duplicate salary handling
-- Ranking-based business insights
+* Decimal salary calculations
+* Bonus handling
+* Tax percentage operations
+* Employee experience analysis
+* Numeric financial processing
 
 ---
 
 # 🔑 Core Concepts Implemented
 
-- Sequential Row Assignment
-- Partition-Based Ranking
-- Duplicate Rank Handling
-- Dense Ranking Logic
-- Salary-Based Sorting
-- Date-Based Ranking
-- Department-wise Analysis
-- Real-Time Business Ranking Scenarios
+* Number Rounding
+* Decimal Precision Control
+* Mathematical Calculations
+* Random Number Generation
+* Absolute Value Handling
+* Financial Formatting
+* Maximum and Minimum Comparison
+* Numeric Business Logic
 
 ---
 
 # 📚 Topics Covered
 
-## 1️⃣ ROW_NUMBER() Function
+## 1️⃣ ABS() Function
 
 Using:
 
-`ROW_NUMBER() OVER()`
-
-Assigning:
-
-- Unique sequential row numbers
-- Ordered salary ranking
-- Date-based row numbering
-- Department-wise numbering
-
----
-
-## 2️⃣ Global Ranking
-
-Applying:
-
-`ORDER BY`
-
-Ranking employees based on:
-
-- Highest salary
-- Lowest salary
-- Latest joining date
-- Alphabetical employee names
-
----
-
-## 3️⃣ Department-Wise Partitioning
-
-Using:
-
-`PARTITION BY department`
-
-Performing:
-
-- Salary ranking inside departments
-- Joining date sequencing
-- Name-wise numbering
-- Internal department analytics
-
----
-
-## 4️⃣ RANK() Function
-
-Using:
-
-`RANK() OVER()`
-
-Features:
-
-- Duplicate values receive same rank
-- Ranking gaps appear automatically
+* `ABS(number)`
 
 Examples:
 
-- Salary competition ranking
-- Department-wise salary comparison
-- Joining-date hierarchy
+* Convert negative values into positive values
+* Calculate absolute financial differences
+* Remove negative sign from calculations
 
 ---
 
-## 5️⃣ DENSE_RANK() Function
+## 2️⃣ ROUND() Function
 
 Using:
 
-`DENSE_RANK() OVER()`
+* `ROUND(number, decimals)`
 
-Features:
+Examples:
 
-- Duplicate values share same rank
-- No ranking gaps
-
-Used for:
-
-- Compact salary ranking
-- Continuous department ranking
-- Performance hierarchy generation
+* Round salary to nearest whole number
+* Round salary to 2 decimal places
+* Financial precision calculations
 
 ---
 
-## 6️⃣ Salary-Based Ranking Analysis
+## 3️⃣ CEIL() / CEILING() Function
 
-Performing:
+Using:
 
-- Highest-paid employee identification
-- Lowest salary comparison
-- Duplicate salary detection
-- Compensation hierarchy creation
+* `CEIL(number)`
 
-Business Use Cases:
+Examples:
 
-- Payroll analysis
-- Compensation benchmarking
-- Promotion eligibility ranking
+* Round salary upward
+* Tax value upper rounding
+* Billing approximation
 
 ---
 
-## 7️⃣ Joining Date Ranking
+## 4️⃣ FLOOR() Function
+
+Using:
+
+* `FLOOR(number)`
+
+Examples:
+
+* Round salary downward
+* Expense lower approximation
+* Floor-based calculations
+
+---
+
+## 5️⃣ TRUNCATE() Function
+
+Using:
+
+* `TRUNCATE(number, decimals)`
+
+Examples:
+
+* Remove decimal digits without rounding
+* Financial cut-off calculations
+* Controlled decimal precision
+
+---
+
+## 6️⃣ MOD() Function
+
+Using:
+
+* `MOD(number1, number2)`
 
 Finding:
 
-- Recently joined employees
-- Oldest employees
-- Department joining sequence
-
-Useful for:
-
-- Experience analysis
-- Employee tenure reporting
-- Workforce growth tracking
+* Odd/even employee experience
+* Remainder-based grouping
+* Numeric classification
 
 ---
 
-## 8️⃣ Alphabetical Ranking Operations
+## 7️⃣ POWER() / POW() Function
 
-Sorting employees based on:
+Using:
 
-- Employee name ascending
-- Department-wise alphabetical ranking
+* `POWER(base, exponent)`
 
-Used for:
+Examples:
 
-- HR reporting
-- Employee directory generation
-- Structured listing
-
----
-
-## 9️⃣ Real-Time Business Partition Analytics
-
-Applying ranking within departments for:
-
-- Chennai salary comparison
-- Hyderabad salary hierarchy
-- Bangalore joining analysis
-
-Helps in:
-
-- Regional performance analysis
-- Departmental comparisons
-- Internal organizational reporting
+* Exponential calculations
+* Financial growth modeling
+* Mathematical projections
 
 ---
 
-## 🔟 Duplicate Value Handling
+## 8️⃣ SQRT() Function
 
-Comparing behavior of:
+Using:
 
-**ROW_NUMBER()**
+* `SQRT(number)`
 
-- Always unique
+Examples:
 
-**RANK()**
+* Square root calculations
+* Analytical data modeling
+* Numeric processing operations
 
-- Duplicate ranks with gaps
+---
 
-**DENSE_RANK()**
+## 9️⃣ SIGN() Function
 
-- Duplicate ranks without gaps
+Using:
 
-Improves understanding of ranking strategy selection.
+* `SIGN(number)`
+
+Finding:
+
+* Positive numbers
+* Negative numbers
+* Zero-value identification
+
+---
+
+## 🔟 RAND() Function
+
+Using:
+
+* `RAND()`
+
+Examples:
+
+* Generate random values
+* Testing numeric randomness
+* Simulation data generation
+
+---
+
+## 1️⃣1️⃣ FORMAT() Function
+
+Using:
+
+* `FORMAT(number, decimals)`
+
+Examples:
+
+* Display salary with commas
+* Financial reporting format
+* Human-readable numeric output
+
+Note:
+
+* Returns string output
+
+---
+
+## 1️⃣2️⃣ GREATEST() Function
+
+Using:
+
+* `GREATEST(value1, value2)`
+
+Finding:
+
+* Maximum salary vs bonus
+* Highest financial values
+* Business comparison logic
+
+---
+
+## 1️⃣3️⃣ LEAST() Function
+
+Using:
+
+* `LEAST(value1, value2)`
+
+Finding:
+
+* Minimum salary vs bonus
+* Lower financial values
+* Comparison-based reporting
 
 ---
 
 # 💻 Practice Work
 
-✅ Solved **24 SQL Window Function queries**
+✅ Solved 13 SQL Numeric Function queries
 
-📈 Covered beginner to advanced ranking scenarios
+📈 Covered beginner to advanced-level numeric operations
 
-🌍 Practiced real-world analytical scenarios including:
+🌍 Practiced real-world scenarios including:
 
-- Salary leaderboard generation
-- Department-wise ranking
-- Employee hierarchy analysis
-- Date-based reporting
-- Duplicate value handling
+* Salary calculations
+* Bonus comparisons
+* Tax processing
+* Decimal formatting
+* Numeric analysis reporting
 
 ---
 
 # 🧠 Key Learnings
 
-- Understanding SQL window function behavior
-- Differentiating ranking methods
-- Applying partition-based analysis
-- Handling duplicate ranking values
-- Performing advanced business analytics
-- Writing production-ready ranking queries
+* Understanding numeric manipulation in SQL
+* Controlling decimal precision
+* Applying mathematical functions efficiently
+* Comparing financial values
+* Formatting numeric outputs professionally
+* Handling real-world business calculations
 
 ---
 
 # 🛠️ Tools Used
 
-🧪 **DB-Fiddle**
-
-🐬 **MySQL**
-
-🌐 **GitHub**
+* 🧪 DB-Fiddle
+* 🐬 MySQL
+* 🌐 GitHub
 
 ---
 
 # 🚀 Next Steps
 
-- Learn **LEAD() and LAG()**
-- Practice **FIRST_VALUE() and LAST_VALUE()**
-- Explore advanced analytical reporting
-- Build ranking dashboards using SQL
+* Learn advanced aggregate numeric functions
+* Practice statistical SQL calculations
+* Explore financial reporting queries
+* Build analytical dashboards using numeric logic
 
 ---
 
@@ -257,12 +273,12 @@ Improves understanding of ranking strategy selection.
 
 | File Name | Description |
 |-----------|-------------|
-| `datacreation.sql` | Employees table structure with sample records |
-| `practice_queries.sql` | Collection of ROW_NUMBER(), RANK(), DENSE_RANK() queries |
-| `README.md` | Documentation for Day 5 SQL Window Functions practice |
+| `datacreation.sql` | Employee salary table structure with numeric sample data |
+| `practice_queries.sql` | Collection of SQL numeric function queries |
+| `README.md` | Documentation for Day 5 SQL Numeric Functions practice |
 
 ---
 
 # ✅ Conclusion
 
-This practice session strengthened SQL analytical query-writing skills through hands-on implementation of **ROW_NUMBER(), RANK(), and DENSE_RANK()** functions. The exercises improved practical understanding of sequential numbering, duplicate ranking behavior, partition-based analysis, and real-time business reporting scenarios, building strong foundational knowledge for advanced SQL analytics and reporting solutions.
+This practice session strengthened SQL Numeric Functions fundamentals through hands-on implementation of rounding, formatting, mathematical calculations, number comparison, and financial numeric analysis. The exercises improved practical SQL query-writing confidence for handling real-world numeric business data effectively in production environments.
